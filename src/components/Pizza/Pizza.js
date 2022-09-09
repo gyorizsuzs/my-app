@@ -1,4 +1,4 @@
-import './Pizza.css';
+/* import './Pizza.css';
 
 function Pizza({ name }) {
   console.log('fini', { name });
@@ -10,3 +10,4 @@ function Pizza({ name }) {
 }
 
 export default Pizza;
+ */

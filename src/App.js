@@ -19,20 +19,6 @@ function App() {
       }
     }
   };
-  /*   const handleClick = () => {
-    if (buttonText === initialText) {
-      setButtonText('You clicked me!');
-    } 
-    if (buttonText === 'You clicked me!') {
-
-      setButtonText('Stop clicking me!');
-    }
-    if (buttonText === 'Stop clicking me!') {
-      setTimeout(() => {
-        setButtonText(initialText);
-      }, 3000);
-    }
-  }; */
   return (
     <>
       <div className="App">

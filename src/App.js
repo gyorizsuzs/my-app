@@ -1,18 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-/* import Pizza from './components/Pizza/Pizza'; */
+/* import Click from './components/Click'; */
 
 function App() {
-  /*  const pizzas = ['Diavola', 'Kolbaszos Rajas', 'Bubbletini']; */
-  const initialText = 'Click me!';
-  let [buttonText, setButtonText] = useState(initialText);
+  const initialText = ['Click me!', 'You clicked me!', 'Stop clicking me!'];
+
+  let [buttonText, setButtonText] = useState(initialText[0]);
 
   const handleClick = () => {
+    for (let i = 0; i < 2; i++) {
+      if (buttonText === initialText[i]) {
+        setButtonText(initialText[i + 1]);
+      } else {
+        setTimeout(() => {
+          setButtonText(initialText[0]);
+        }, 3000);
+      }
+    }
+  };
+  /*   const handleClick = () => {
     if (buttonText === initialText) {
       setButtonText('You clicked me!');
-    }
+    } 
     if (buttonText === 'You clicked me!') {
+
       setButtonText('Stop clicking me!');
     }
     if (buttonText === 'Stop clicking me!') {
@@ -20,7 +32,7 @@ function App() {
         setButtonText(initialText);
       }, 3000);
     }
-  };
+  }; */
   return (
     <>
       <div className="App">
